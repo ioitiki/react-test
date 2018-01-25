@@ -25,7 +25,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path='/' render={()=><TicketList ticketList={this.state.masterTicketList} />} />
           <Route path='/newticket' render={()=><NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList} />} />
