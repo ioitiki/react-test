@@ -1,4 +1,5 @@
 import ticketList from './../../src/reducers/ticket-list-reducer';
+import constants from './../../src/constants';
 
 describe("Ticket list reducer", () => {
 
@@ -6,4 +7,8 @@ describe("Ticket list reducer", () => {
     expect(ticketList([], { type: null })).toEqual([]);
   });
 
+  test('imported value should match action type string', () => {
+    expect(constants.ADD_TICKET).toEqual('testing testing 123');
+  });
+  
 });
